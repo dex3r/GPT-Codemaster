@@ -1,7 +1,7 @@
-﻿using AiProgrammer.Solving;
+using AiProgrammer.Solving;
 using OpenAI_API.Chat;
 
-namespace AiProgrammer.Logging;
+namespace AiProgrammer.Loggingv1;
 
 public interface ISolverProgressLogger
 {

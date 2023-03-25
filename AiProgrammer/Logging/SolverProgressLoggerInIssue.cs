@@ -1,10 +1,10 @@
-﻿using AiProgrammer.Github;
+using AiProgrammer.Github;
 using AiProgrammer.Solving;
 using AiProgrammer.Solving.GithubIssue;
 using AiProgrammer.Solving.Model;
 using OpenAI_API.Chat;
 
-namespace AiProgrammer.Logging;
+namespace AiProgrammer.Loggingv1;
 
 public class SolverProgressLoggerInIssue : ISolverProgressLogger
 {
