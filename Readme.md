@@ -18,6 +18,7 @@ Example Pull Requests created with this tool are available [here](https://github
  - [ ] Implement Reflection (https://arxiv.org/pdf/2303.11366.pdf and https://nanothoughts.substack.com/p/reflecting-on-reflexion)
  - [ ] Being able to go though massive projects
  - [ ] Read .ai/project_description_short.json of every project and include it in the prompt
+ - [ ] Easy attachment of different LLMs, inlucing locally hosted
 
 ## Tests
  - [x] Comlpete a simple Issue, [example](https://github.com/dex3r/GPT-Codemaster/pull/2)
