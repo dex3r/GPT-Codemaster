@@ -18,7 +18,7 @@ An experimental project to automate programming. It uses a task-based approach t
  - [ ] Read .ai/project_description_short.json of every project and include it in the prompt
 
 ## Tests
- - [x] Comlpete a simple Issue, example: 
+ - [x] Comlpete a simple Issue, [example](https://github.com/dex3r/GPT-Codemaster/pull/2)
  - [ ] Complete a more complex issue
 
 ## FAQ 
