@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="dex3r.Forks.OpenAI" Version="1.6.2" />
+      <PackageReference Include="JetBrains.Annotations" Version="2023.2.0-eap1" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.2.23128.3" />
+      <PackageReference Include="Octokit" Version="5.0.2" />
+      <PackageReference Include="Scrutor" Version="4.2.1" />
+      <PackageReference Include="ValueOf" Version="2.0.31" />
+    </ItemGroup>
+
+</Project>

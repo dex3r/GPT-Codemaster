@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Octokit" Version="5.0.2" />
+      <PackageReference Include="ValueOf" Version="2.0.31" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AiProgrammer\AiProgrammer.csproj" />
+    </ItemGroup>
+
+</Project>

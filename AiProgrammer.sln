@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiProgrammer", "AiProgrammer\AiProgrammer.csproj", "{665F57F8-2517-483D-B30D-F20CDEF3D71F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubIssueListener", "GithubIssueListener\GithubIssueListener.csproj", "{17ABB527-EBF7-499F-B41F-252ACD84EFD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiProgrammerTests", "AiProgrammerTests\AiProgrammerTests.csproj", "{0782AE37-1A4B-44B6-A680-524F2E9445BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{665F57F8-2517-483D-B30D-F20CDEF3D71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665F57F8-2517-483D-B30D-F20CDEF3D71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665F57F8-2517-483D-B30D-F20CDEF3D71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665F57F8-2517-483D-B30D-F20CDEF3D71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17ABB527-EBF7-499F-B41F-252ACD84EFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17ABB527-EBF7-499F-B41F-252ACD84EFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17ABB527-EBF7-499F-B41F-252ACD84EFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17ABB527-EBF7-499F-B41F-252ACD84EFD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0782AE37-1A4B-44B6-A680-524F2E9445BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0782AE37-1A4B-44B6-A680-524F2E9445BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0782AE37-1A4B-44B6-A680-524F2E9445BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0782AE37-1A4B-44B6-A680-524F2E9445BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
