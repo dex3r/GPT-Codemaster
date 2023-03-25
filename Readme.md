@@ -26,7 +26,7 @@ Example Pull Requests created with this tool are available [here](https://github
 ## FAQ 
 
 ### Does it work?
-Sometimes, and only for small projects with small files, like this one. The biggest limitation right now is the token length for LLMs.
+Sometimes, and only for small projects with small files, like this one. The biggest limitation right now is the tokens length for LLMs.
 
 ### Does it _really_ work?
 It's an experiment, not an actual product.
