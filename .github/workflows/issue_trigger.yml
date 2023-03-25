@@ -1,0 +1,56 @@
+name: GPT-Codemaster, Create Pull Request that solves this issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  issue_filter:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+    steps:
+    - name: Check for "GPT-Codemaster" label
+      if: contains(github.event.issue.labels.*.name, 'GPT-Codemaster attention needed')
+      run: |
+        echo "Selected issue found:"
+        echo "${{ github.event.issue.title }}"
+        echo "${{ github.event.issue.html_url }}"
+        echo "ISSUE_TITLE=${{ github.event.issue.title }}" >> $GITHUB_ENV
+        echo "ISSUE_URL=${{ github.event.issue.html_url }}" >> $GITHUB_ENV
+    
+    - name: Notify job started
+      if: env.ISSUE_TITLE != ''
+      uses: ben-z/actions-comment-on-issue@1.0.2
+      with:
+        message: "Hello, GPT-Codemaster here. I'm starting to work on the issue, give me a moment...\n\n [Job progress](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/)"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Remove label
+      if: env.ISSUE_TITLE != ''
+      uses: peter-murray/remove-labels-action@v1
+      with:
+         labels: GPT-Codemaster attention needed
+
+    - name: Setup .NET 7.0
+      if: env.ISSUE_TITLE != ''
+      uses: actions/setup-dotnet@v3.0.3
+      with:
+        dotnet-version: 7.0.x
+        include-prerelease: true
+
+    - name: Checkout repository
+      if: env.ISSUE_TITLE != ''
+      uses: actions/checkout@v3.4.0
+
+    - name: Build and run C# application
+      if: env.ISSUE_TITLE != ''
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+      working-directory: ./GithubIssueListener
+      run: |
+        dotnet build
+        dotnet run
