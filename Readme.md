@@ -27,7 +27,7 @@ An experimental project to automate programming. It uses a task-based approach t
 Sometimes, and only for small projects with small files, like this one. The biggest limitation right now is the token length for LLMs.
 
 ### Does it _really_ work?
-It's an experiment, not an actual product, but it's used for development in this repository. Check out the exmaple Pull Requests [here](https://github.com/dex3r/GPT-Codemaster/pulls?q=is%3Apr+label%3A%22GPT-Codemaster+example%22+)
+It's an experiment, not an actual product, but it's used for development in this repository. Check out the [exmaple Pull Requests](https://github.com/dex3r/GPT-Codemaster/pulls?q=is%3Apr+label%3A%22GPT-Codemaster+example%22+)
 
 ### What do I need to use it?
 1. GPT-4 API access and token
