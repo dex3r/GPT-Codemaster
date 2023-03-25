@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using AiProgrammer.AiInterface;
 using AiProgrammer.Solving.GithubIssue;
 
@@ -9,6 +9,7 @@ public class FollowNextStepExecutor
     private readonly ICompletions _completions;
     private readonly IIssueDescriptionProvider _issueDescriptionProvider;
     private readonly ICurrentStepsHolder _currentStepsHolder;
+    private string _customSystemMessage;
 
     public FollowNextStepExecutor(ICompletions completions, IIssueDescriptionProvider issueDescriptionProvider,
         ICurrentStepsHolder currentStepsHolder)
@@ -16,8 +17,14 @@ public class FollowNextStepExecutor
         _completions = completions;
         _issueDescriptionProvider = issueDescriptionProvider;
         _currentStepsHolder = currentStepsHolder;
+        _customSystemMessage = null;
     }
     
+    public void SetCustomSystemMessage(string customSystemMessage)
+    {
+        _customSystemMessage = customSystemMessage;
+    }
+
     public async Task<string> ExecuteStep(string contentDescription, string content, string currentStepDescription)
     {
         string stepContent = $"{contentDescription}:\n" +
@@ -59,6 +66,11 @@ public class FollowNextStepExecutor
 
     private string GetSystemMessage()
     {
+        if (_customSystemMessage != null)
+        {
+            return _customSystemMessage;
+        }
+
         return "You are an AI system that does programming tasks by reading the issue specification and modifying the existing code by " +
                "changing it or adding new code to resolve the user request. You minimize changes to the code and make sure not to modify " +
                "anything that the user has not requested. Do not remove classes, methods, or fields - only add or modify existing ones. " +
